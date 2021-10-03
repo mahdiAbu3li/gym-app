@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="header">
+        <p>login to your account</p>
+    </div>
+    <!-- <hr > -->
+<form class="formContainer" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="username">
+    <label for="username">User name</label>
+    <input id="username" type="text" formControlName="username"/>
+    </div>
+    <div class="password">
+    <label for="password">password</label>
+    <input id="password" type="password" formControlName="password"/>
+
+</div>
+<div class="buttonContainer">
+    <button type="submit">Login</button>
+</div>
+{{islogin}}
+<div *ngIf="!islogin && this.loginForm.get('password')?.touched">
+    user name or password is incorrect
+</div>
+
+</form>
+</div>
