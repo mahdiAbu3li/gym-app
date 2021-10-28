@@ -13,6 +13,11 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
   goToAddPlayer(){
+    
     this.route.navigate(['addPlayer'])
+  }
+  goToShowPlayer(){
+    
+    this.route.navigate(['showPlayer'])
   }
 }

@@ -1,0 +1,33 @@
+<div class="container">
+   <div class="table">
+       <div class="table-control">
+           <input (ngModelChange)="filterArray($event)" [(ngModel)]="searchText" type="text" placeholder="name,date "/>
+           <!-- <button (click)="filterArray()">search</button> -->
+       </div>
+       <div class="table-header">
+           <div class="c1">name</div>
+           <div class="c2">date</div>
+           <div class="c3">mony</div>
+           
+        </div>
+
+       <div class="table-raws">
+        <div class="raw" *ngFor="let item of filteredArray">
+            <div class="c1">
+                <p>{{item.name}}</p>
+            </div>
+            <div class="c1">
+                <p>{{item.date}}</p>
+            </div>
+            <div class="c1">
+                <p>{{item.mony}}</p>
+            </div>
+           
+            
+        </div>
+       </div>
+       <div class="table-footer">
+
+       </div>
+   </div> 
+</div>

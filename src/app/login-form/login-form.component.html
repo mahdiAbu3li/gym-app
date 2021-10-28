@@ -16,7 +16,7 @@
 <div class="buttonContainer">
     <button type="submit">Login</button>
 </div>
-{{islogin}}
+
 <div *ngIf="!islogin && this.loginForm.get('password')?.touched">
     user name or password is incorrect
 </div>
